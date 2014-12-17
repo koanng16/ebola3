@@ -15,8 +15,33 @@
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<!--YOU NEED THIS JAVASCRIPT CODE FOR THE ROLLOVER-->
+<script type="text/javascript">
+if(document.images)
+{
+var image_array = new Array();
+// path to the directory with images
+var path = 'images/';
+// enumeration of the "active" images
+image_array[0] = path + "image1.gif";
+image_array[1] = path + "image2.gif";
+var preload_image = new Array ();
+for(var i=0; i<image_array.length; i++)
+{
+preload_image[i]= new Image();
+preload_image[i].src = image_array[i];
+}
+}
+function rollover(name, filename)
+{
+document.images[name].src = filename;
+}
+</script>
   </head>
   <body>
       <div id="header">
@@ -43,7 +68,8 @@
   }
 </style>
       </section>
-<img src="http://www.couponraja.in/theroyale/wp-content/uploads/2014/08/history_of_ebola.jpg">
+<a href="http://www.couponraja.in/theroyale/wp-content/uploads/2014/08/history_of_ebola.jpg" rel="lightbox" onmouseover="rollover('button1','http://static4.businessinsider.com/image/53e10c08eab8eaa007a9512b/this-chart-shows-every-ebola-outbreak-in-history.jpg')" onmouseout="rollover('button1','http://www.couponraja.in/theroyale/wp-content/uploads/2014/08/history_of_ebola.jpg')">
+<img name="button1" src="http://www.couponraja.in/theroyale/wp-content/uploads/2014/08/history_of_ebola.jpg">
 <a href="ebola.html">What is Ebola?</a> / <a href="history.html">History of Ebola</a> / <a href="effects.html">Effects of Ebola</a> / <a href="symptoms.html">Symptoms of Ebola</a> / <a href="outbreaks&solutions.html">Outbreaks and Solutions of Ebola</a> / <a href="stories.html">Stories From Ebola Survivors</a>
 <style>
   a {
