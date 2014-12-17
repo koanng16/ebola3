@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
 <html>
   <head>
     <link href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
@@ -16,7 +17,29 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    "http://www.w3.org/TR/html4/loose.dtd">
+<link href="tanstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript">
+if(document.images)
+{
+var image_array = new Array();
+var path = 'images/';
+image_array[0] = path + "image1.gif";
+image_array[1] = path + "image2.gif";
+var preload_image = new Array ();
+for(var i=0; i<image_array.length; i++)
+{
+preload_image[i]= new Image();
+preload_image[i].src = image_array[i];
+}
+}
+function rollover(name, filename)
+{
+document.images[name].src = filename;
+}
   </head>
   <body>
       <div id="header">
@@ -67,7 +90,7 @@
 Internal bleeding</li>
       </section>
 
-<img src="http://hdwallpapersmart.com/wp-content/uploads/2014/10/ebola-effects.jpg" onmouseover="this.src='http://www.flufacts.com/images/kid-symptoms.jpg'" />
+<img src="http://hdwallpapersmart.com/wp-content/uploads/2014/10/ebola-effects.jpg">
 <img src="http://www.dallasnews.com/incoming/20140727-web_0728int_ebola_symptoms.png.ece/BINARY/original/WEB_0728INT_EBOLA_SYMPTOMS.png"><br>
 <a href="ebola.html">What is Ebola?</a> / <a href="history.html">History of Ebola</a> / <a href="effects.html">Effects of Ebola</a> / <a href="symptoms.html">Symptoms of Ebola</a> / <a href="outbreaks&solutions.html">Outbreaks and Solutions of Ebola</a> / <a href="stories.html">Stories From Ebola Survivors</a>
 <style>
